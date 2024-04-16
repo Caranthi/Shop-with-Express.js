@@ -14,13 +14,13 @@
     <table class="table table-bordered table-striped">
       <thead>
       <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Description</th>
-        <th scope="col">Price ($)</th>
-        <th scope="col">Weight (kg)</th>
-        <th scope="col">Category</th>
-        <th scope="col"></th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price ($)</th>
+        <th>Weight (kg)</th>
+        <th>Category</th>
+        <th></th>
       </tr>
       </thead>
       <tbody>
@@ -36,7 +36,7 @@
         </td>
       </tr>
       <tr>
-        <th scope="row"></th>
+        <th></th>
         <td>
           <input type="text" v-model="productName">
         </td>
@@ -190,6 +190,7 @@ h1 {
 #searchButton {
   margin-right: 3%;
   margin-left: 3%;
+  background-color: darkturquoise;
 }
 
 table {
