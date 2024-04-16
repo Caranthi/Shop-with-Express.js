@@ -107,7 +107,7 @@ export default {
             console.error('ERROR:', error);
             this.reload = false;
 
-            this.emitter.emit('empty', {missing_parameter: error.response.data.message});
+            this.emitter.emit('empty', {error: error.response.data.message});
           });
 
           axios.get(`http://localhost:3000/orders/${this.orderData.id}`).then(response => {
@@ -129,7 +129,7 @@ export default {
             console.error('ERROR:', error);
             this.reload = false;
 
-            this.emitter.emit('empty', {missing_parameter: error.response.data.message});
+            this.emitter.emit('empty', {error: error.response.data.message});
           });
 
           axios.get(`http://localhost:3000/orders/${this.orderData.id}`).then(response => {
@@ -151,7 +151,7 @@ export default {
             console.error('ERROR:', error);
             this.reload = false;
 
-            this.emitter.emit('empty', {missing_parameter: error.response.data.message});
+            this.emitter.emit('empty', {error: error.response.data.message});
           });
 
           axios.get(`http://localhost:3000/orders/${this.orderData.id}`).then(response => {

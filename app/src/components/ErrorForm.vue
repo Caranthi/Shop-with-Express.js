@@ -1,6 +1,6 @@
 <template>
   <div class="alert alert-danger" v-if="this.isShown" v-on:click="closeError">
-    <strong/> {{ this.missing_parameter }}
+    <strong/> {{ this.error }}
   </div>
 </template>
 
@@ -9,7 +9,7 @@ export default {
   name: "ErrorForm",
   data(){
     return{
-      missing_parameter: '',
+      error: '',
       isShown: false,
     }
   },
@@ -23,7 +23,7 @@ export default {
   mounted() {
     this.emitter.on('empty', (data) =>
     {
-      this.missing_parameter = data.missing_parameter;
+      this.error = data.error;
       this.isShown = true;
     })
   },

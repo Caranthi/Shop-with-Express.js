@@ -123,7 +123,7 @@ export default {
           if (this.userName === '' || this.email === '' || this.phoneNumber === '') {
             console.error('empty');
 
-            this.emitter.emit('empty', {missing_parameter: 'All order fields must be filled!'});
+            this.emitter.emit('empty', {error: 'All order fields must be filled!'});
           } else if (this.order === 0) {
             let orderData = {date: new Date(), state: 1, userName: this.userName, email: this.email, phoneNumber: this.phoneNumber};
 
@@ -137,7 +137,7 @@ export default {
               axios.post('http://localhost:3000/orders/positions', positionData);
             }).catch(error => {
               console.error('ERROR:', error);
-              this.emitter.emit('empty', {missing_parameter: error.response.data.message});
+              this.emitter.emit('empty', {error: error.response.data.message});
             });
           } else {
             let positionData = {order: this.order, product: product, quantity: 1};
@@ -170,7 +170,7 @@ export default {
 
           axios.post('http://localhost:3000/products', productData).catch(error => {
             console.error('ERROR:', error);
-            this.emitter.emit('empty', {missing_parameter: error.response.data.message});
+            this.emitter.emit('empty', {error: error.response.data.message});
           });
 
           this.getData();
