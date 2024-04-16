@@ -8,7 +8,7 @@ const Order = bookshelf.model('Order',
         columns:
             {
                 id: {type: consts.increments, primary: true},
-                date: {type: 'date'},
+                date: {type: consts.date},
                 state: {type: consts.integer},
                 userName: {type: consts.string},
                 email: {type: consts.string},

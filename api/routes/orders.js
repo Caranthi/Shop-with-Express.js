@@ -32,15 +32,15 @@ router.post('/', async function (req, res, next) {
         const orderData = req.body;
 
         if (!orderData.userName) {
-            res.status(consts.BAD_REQUEST).json({message: 'Order user data must be specified'});
+            res.status(consts.BAD_REQUEST).json({message: 'Name must be specified'});
             return;
         }
         if (!orderData.email) {
-            res.status(consts.BAD_REQUEST).json({message: 'Order user data must be specified'});
+            res.status(consts.BAD_REQUEST).json({message: 'Email must be specified'});
             return;
         }
         if (!orderData.phoneNumber) {
-            res.status(consts.BAD_REQUEST).json({message: 'Order user data must be specified'});
+            res.status(consts.BAD_REQUEST).json({message: 'Phone number must be specified'});
             return;
         }
         if (/[a-zA-Z]/.test(orderData.phoneNumber)) {
@@ -66,15 +66,15 @@ router.put('/:id', async function (req, res, next) {
         const updatedOrderData = req.body;
 
         if (!updatedOrderData.userName) {
-            res.status(consts.BAD_REQUEST).json({message: 'Order user data must be specified'});
+            res.status(consts.BAD_REQUEST).json({message: 'Name must be specified'});
             return;
         }
         if (!updatedOrderData.email) {
-            res.status(consts.BAD_REQUEST).json({message: 'Order user data must be specified'});
+            res.status(consts.BAD_REQUEST).json({message: 'Email must be specified'});
             return;
         }
         if (!updatedOrderData.phoneNumber) {
-            res.status(consts.BAD_REQUEST).json({message: 'Order user data must be specified'});
+            res.status(consts.BAD_REQUEST).json({message: 'Phone number must be specified'});
             return;
         }
         if (/[a-zA-Z]/.test(updatedOrderData.phoneNumber)) {
