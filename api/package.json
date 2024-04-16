@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bookshelf": "^1.2.0",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "jade": "^1.9.2",
+    "knex": "^0.21.21",
+    "knex-migrate": "^1.7.4",
+    "morgan": "~1.9.1",
+    "sqlite3": "^5.1.7",
+    "typeorm": "^0.3.19"
+  }
+}
